@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+span{
+  position: relative;
+  display: inline-flex;
+  width: 100px;
+  height: 25px;
+  margin-right: 50px;
+  margin-top: 5px;
+}
+span a{
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "LOG IN";
+  height: 35px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+span a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(15px);
+}
+
+span a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(15px);
+}
+
+span a:hover{
+  transform: translateZ(-15px) rotateX(-90deg);
+}
